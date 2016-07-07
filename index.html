@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>data formatter</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css">
+    <script async src="index.js"></script>
+  </head>
+  <body class="data-formatter">
+    <main class="data-formatter__main main" role="main">
+      <div class="main__sources clearfix">
+        <div class="area js-data-area">
+          <h2 class="area__title">data</h2>
+          <span class="area__info" data-bind="text: info, css: { error: isError }"></span>
+          <textarea class="area__value" data-bind="textInput: value, attr: { placeholder: placeholder }, event: { keydown: onKeyDown }"></textarea>
+          <div>
+            <select class="area__type" data-bind="options: types, value: selectedType"></select>
+            <input class="area__file" type="file" value="load from file..." accept="text/*" data-bind="event: { change: onChange }">
+          </div>
+        </div>
+
+        <div class="area js-template-area">
+          <h2 class="area__title">template</h2>
+          <span class="area__info" data-bind="text: info, css: { error: isError }"></span>
+          <textarea class="area__value" data-bind="textInput: value, attr: { placeholder: placeholder }, event: { keydown: onKeyDown }"></textarea>
+          <div>
+            <select class="area__type" data-bind="options: types, value: selectedType"></select>
+            <input class="area__file" type="file" value="load from file..." accept="text/*" data-bind="event: { change: onChange }">
+          </div>
+        </div>
+      </div>
+
+      <div class="area js-result-area">
+        <textarea class="area__value" data-bind="textInput: value"></textarea>
+        <a class="area__download" href="javascript:void 0" data-bind="click: onClick">download</a>
+      </div>
+    </main>
+
+    <a class="github-fork-ribbon" href="https://github.com/tsukurite/data-formatter" title="Fork me on GitHub">Fork me on GitHub</a>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+---
+---
+@charset "utf-8";
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: #ccffcc;
+	margin: 0;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.data-formatter {
+	.data-formatter__main.main {
+		margin: 2rem auto 0;
+		width: 800px;
+
+		.main__sources {
+			margin-bottom: 0.7rem;
+
+			.area {
+				width: 48%;
+			}
+
+			.area:first-child {
+				float: left;
+			}
+			.area:last-child {
+				float: right;
+			}
+		}
+
+		.area {
+			.area__title {
+				color: #336633;
+				display: inline;
+				font-family: "Poiret One", sans-serif;
+				font-weight: bold;
+				margin: 0 5px 0 0;
+			}
+
+			.area__type {
+				font-family:
+					Consolas,
+					Inconsolata,
+					Menlo,
+					Monaco,
+					monospace;
+				vertical-align: middle;
+			}
+
+			.area__file {
+				vertical-align: middle;
+			}
+
+			.area__info {
+				font-family:
+					Consolas,
+					Inconsolata,
+					Menlo,
+					Monaco,
+					monospace;
+				font-size: 80%;
+
+				&.error {
+					color: red;
+				}
+			}
+
+			.area__value {
+				border: 1px solid #669966;
+				box-sizing: border-box;
+				font-family:
+					Consolas,
+					Inconsolata,
+					Menlo,
+					Monaco,
+					monospace;
+				height: 12rem;
+				width: 100%;
+			}
+
+			.area__download {
+				&:link, &:visited {
+					color: #336633;
+				}
+				&:hover, &:active {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	.github-fork-ribbon::before {
+		background-color: green;
+	}
+}
