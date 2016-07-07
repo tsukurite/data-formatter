@@ -1,0 +1,22 @@
+timezone:
+  Asia/Tokyo
+
+sass:
+  style: compressed
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - Rakefile
+  - javascript
+  - node_modules
+  - npm-shrinkwrap.json
+  - package.json
+  - vendor
+  - webpack.config.coffee
